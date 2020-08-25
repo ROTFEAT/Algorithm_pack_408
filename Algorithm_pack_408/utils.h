@@ -67,7 +67,7 @@ void reverse(vector<T>&ve, int low, int hight)//1为第一个数，而非0
 		cout << *it << " ";
 		it++;
 	}
-	cout << endl;//
+	cout << endl;
 }
 
 
