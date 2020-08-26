@@ -23,3 +23,6 @@ T FindBackN(list<T> li, int n)//查找链表倒数第n个节点
 }
 
 
+
+
+

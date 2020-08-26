@@ -152,8 +152,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="sort.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="排序算法.h" />
+    <ClInclude Include="树与二叉树.h" />
     <ClInclude Include="线性表算法.h" />
   </ItemGroup>
   <ItemGroup>

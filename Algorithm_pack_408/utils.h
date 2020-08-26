@@ -4,6 +4,7 @@
 #include<cstdio>
 #include<list>
 #include<time.h>
+#include"树与二叉树.h"
 using namespace std;
 #define MAX 100
 template<typename T> 
@@ -46,6 +47,16 @@ list<int> gengerate_list_int(int n)//生成n项list
 	return res;
 }
 
+void PrintLinkedList(Node *node)
+{
+	
+	while (node != NULL)
+	{
+		cout << node->data << " ";
+		node = node->next;
+	}
+}
+
 
 //反转数组  用以解决循环左右移动的问题的核心
 template<typename T>
@@ -69,5 +80,8 @@ void reverse(vector<T>&ve, int low, int hight)//1为第一个数，而非0
 	}
 	cout << endl;
 }
+
+
+
 
 
