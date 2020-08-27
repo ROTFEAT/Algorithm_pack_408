@@ -23,6 +23,29 @@ T FindBackN(list<T> li, int n)//查找链表倒数第n个节点
 }
 
 
+//自构造单向链表  
+class Node {
+public:
+	int data;
+	//Node *proi;
+	Node *next;
+	Node(int data);
+};
 
+Node::Node(int data)
+{
+	this->data = data;
+}
 
+Node* init_list(vector<int> ve) { //使用数组生成一条链表 尾插法 返回头指针
+
+	auto it = new Node(ve[0]);
+	const auto head = it;
+	for (int i = 1; i < ve.size(); i++)
+	{
+		it->next = new Node(ve[i]);
+		it = it->next;
+	}
+	return head;
+}
 

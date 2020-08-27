@@ -5,8 +5,7 @@
 #include<iostream>
 #include<random>
 #include<ctime>
-#include"线性表算法.h"
-#include"树与二叉树.h"
+
  
 using namespace std;
 int main()
@@ -17,6 +16,8 @@ int main()
 	vector<char> ve{ 'a','b','c','d','1','2','3','4','5'};//循环左右移动测试数组
 	vector<int>va{ 1,2,3,4,5 };
 	
+	auto head = init_list(va);
+	PrintMyList(head);
 	
 
 	//print_ve(ve);//打印vector数组

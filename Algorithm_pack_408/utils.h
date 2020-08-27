@@ -5,6 +5,8 @@
 #include<list>
 #include<time.h>
 #include"树与二叉树.h"
+#include"线性表算法.h"
+#include"排序算法.h"
 using namespace std;
 #define MAX 100
 template<typename T> 
@@ -47,13 +49,12 @@ list<int> gengerate_list_int(int n)//生成n项list
 	return res;
 }
 
-void PrintLinkedList(Node *node)
+void PrintMyList(Node *head)
 {
-	
-	while (node != NULL)
-	{
-		cout << node->data << " ";
-		node = node->next;
+	auto it = head;
+	while (it != NULL) {
+		cout << it->data<<"  ";
+		it = it->next;
 	}
 }
 

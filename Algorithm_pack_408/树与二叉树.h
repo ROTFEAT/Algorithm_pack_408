@@ -1,32 +1,28 @@
 #pragma once
 #include<iostream>
 #include<vector>
-
 using namespace std;
 
-struct Node {
-		int data;
-		Node *next;
 
-}node;
-//遍历二叉树
-template <typename T>
-Node * InitLinkedList(vector<T>ve)
-{
-	int n = ve.size();
-	node.data = ve[0];
-	node.next = NULL;
-	auto head = &node;
-	auto it = &node;
-	for (int i = 1; i < n; i++)
+//自构建树
+class TreeNode {
+public:
+	int data;
+	TreeNode *right;
+	TreeNode *left;
+
+	TreeNode(int data)
 	{
-		auto node2 = new Node();
-		node2->data = ve[i];
-		it->next = node2;
-		it = it->next;
+		this->data = data;
 	}
-	return head;
+};
+//层序遍历生成二叉树
+TreeNode* InitTree(vector<int>ve)
+{
+	
 }
+
+
 
 
 
