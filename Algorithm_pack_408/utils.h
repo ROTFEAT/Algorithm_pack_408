@@ -21,7 +21,12 @@ void checkOrder(vector<int> ve)
 	if (ve.size() <= 1) return ;
 	for (int i = 1; i < ve.size(); i++)
 	{
-		if (ve[i] < ve[i - 1]) cout << "结果有错误" << endl;
+		if (ve[i] < ve[i - 1])
+		{
+			cout << "结果有错误" << endl;
+			return;
+		}
+		
 	}
 	cout << "OK!";
 }
