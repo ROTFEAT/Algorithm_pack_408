@@ -41,16 +41,58 @@ void shellSort(vector<int> ve)
 	checkOrder(ve);
 }
 
+void quickSort(vector<int>& ve, int low, int  hight)//选择第一个为枢轴
+{  //因为涉及了递归 所以 需要取地址
+	int i = low, j = hight;
+	int temp;
+	if (low < hight)//判断是否进行下面的运算
+	{
+		temp = ve[low];//保存枢轴数字 一般为第一个
+		while (i < j)
+		{
+			while (j > i && ve[j] >= temp) j--; //注意 一定是从j 也就是高位开始的
+			if (i < j)//因为 只有地位的temp已经被保存  所以可以把高位换到第一位去
+			{
+				ve[i] = ve[j];
+				i++;
+			}
+			while (i < j && ve[i] < temp) i++;
+			if (i < j)
+			{
+				ve[j] = ve[i];
+				j--;
+			}
 
-void selectSort(vector<int> ve)
+		}
+		ve[i] = temp;
+		quickSort(ve, low, i - 1);//注意别把i带进下次递归中 枢轴的位置已经确定了 不必再次排序
+		quickSort(ve, i + 1, hight);
+	}
+}
+
+
+void bubbleSort(vector<int> ve)//冒泡 没啥说的
 {
 	for (int i = 0; i < ve.size(); i++)
 	{
+		for (int j = 0; j < ve.size() - i - 1; j++)
+		{
+			if (ve[j] > ve[j + 1]) swap(ve[j], ve[j + 1]);
+		}
+	}
+	print_ve(ve);
+	//checkOrder(ve);
+}
+
+void selectSort(vector<int> ve) //选择排序  
+{
+	for (int i = 0; i < ve.size(); i++)
+	{ //每次选择该轮的未排序的第一个数下标为最小数下标，
 		int min = i;
-		for (int j = i; j < ve.size(); j++)
+		for (int j = i+1; j < ve.size(); j++)
 		{
 			if (ve[min] > ve[j]) {
-				min = i;
+				min = j;
 			}
 		}
 		swap(ve[min], ve[i]);
@@ -66,9 +108,3 @@ void heapSort(vector<int> ve)
 	
 }
 
-void bubbleSort(vector<int> ve)
-{
-	vector<int> arr = ve;
-	
-
-}
