@@ -13,7 +13,7 @@ int main()
 {
 	
 	
-	vector<int> ve = gengerate_arr_int(24); //生成随机数组
+	vector<int> ve = gengerate_arr_int(20); //生成随机数组
 	print_ve(ve);
 	//list<int> li = gengerate_list_int(8); //生成随机链表
 	//vector<char> ve{ 'a','b','c','d','1','2','3','4','5'};//循环左右移动测试数组
@@ -21,14 +21,6 @@ int main()
 	//排序
 	//insertSort(ve);  //ok！
 	//shellSort(ve);	//ok!
-	//bubbleSort(ve);   //ok！
-	/*
-	quickSort(ve,0,ve.size()-1);
-	print_ve(ve);  //ok!
-	*/
-
-	selectSort(ve);
-
 	
 	//auto head = init_list(va);
 	//PrintMyList(head);
