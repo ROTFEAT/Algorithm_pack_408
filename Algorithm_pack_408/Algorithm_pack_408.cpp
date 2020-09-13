@@ -22,8 +22,14 @@ int main()
 	//insertSort(ve);  //ok！
 	//shellSort(ve);	//ok!
 	//bubbleSort(ve);   //ok！
+	/*
 	quickSort(ve,0,ve.size()-1);
-	print_ve(ve);
+	print_ve(ve);  //ok!
+	*/
+
+	selectSort(ve);
+
+	
 	//auto head = init_list(va);
 	//PrintMyList(head);
 	

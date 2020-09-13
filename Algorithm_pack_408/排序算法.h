@@ -82,6 +82,24 @@ void quickSort(vector<int> &ve,int low ,int  hight)//选择第一个为枢轴
 	}
 }
 
+void selectSort(vector<int> ve)
+{
+	for (int i = 0; i < ve.size(); i++)
+	{
+		int min = i;
+		for (int j = i; j < ve.size(); j++)
+		{
+			if (ve[min] > ve[j]) {
+				min = i;
+			}
+		}
+		swap(ve[min], ve[i]);
+	}
+	print_ve(ve);
+	checkOrder(ve);
+}
+
+
 void heapSort(vector<int> ve)
 {
 	vector<int> arr = ve;
